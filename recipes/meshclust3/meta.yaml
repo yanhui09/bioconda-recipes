@@ -17,9 +17,8 @@ source:
 
 requirements:
   build:
-    - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - cmake
+    - cmake >=3.9
     - make
   host:
     - zlib
@@ -35,6 +34,7 @@ about:
 test:
   commands:
     - meshclust -h
+    - identity -h
 
 extra:
   identifiers:
